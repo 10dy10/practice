@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=yes" name="viewport" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/sub4.css">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Js -->
+  <!-- <script src="../js/main.js" defer></script> -->
+
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- main -->
+  <main>
+    <article>
+      <div class="inner">
+        <h1>고객상담</h1>
+      </div>
+    </article>
+  </main>
+
+  <!-- section -->
+  <section class="section01">
+    <article>
+      <div class="inner">
+        <h2>
+          <span>연락처와 문의 내용</span>을 남겨주시면<br>
+          스낵마루의 전문 상담사가 친절하고 빠르게 답변드릴게요.
+        </h2>
+        <div class="form_container">
+          <form action="" method="POST">
+            <div>
+              <label for="user_name">이름 <span>(필수입력)</span></label>
+              <input type="text" class="user_name" id="user_name" required>
+            </div>
+            <div>
+              <label for="user_email">이메일 주소 <span>(필수입력)</span></label>
+              <input type="email" class="user_email" id="user_email" required>
+            </div>
+            <div>
+              <label for="user_phone">휴대전화번호</label>
+              <input type="tel" class="user_phone" id="user_phone">
+            </div>
+            <div>
+              <label for="user_inquiry">문의 내용</label>
+              <textarea name="" id="user_inquiry" cols="30" rows="20"></textarea>
+            </div>
+            <div>
+              <label for="add_file">파일 첨부</label>
+              <input type="file" name="" id="" class="file">
+            </div>
+            <button class="application">상담 신청</button>
+          </form>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <script>
+
+    const consultingForm = document.querySelector('form')
+    const userName = document.querySelector('.user_name')
+    const userEmail = document.querySelector('.user_email')
+    
+    const regexp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+  </script>
+</body>
+</html>
