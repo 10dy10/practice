@@ -157,7 +157,7 @@ h2 {
 }
 .section04 .container .item {
   width: 100%;
-  aspect-ratio: 2/ 1;
+  aspect-ratio: 2/ 1; /* 비율 설정 */
   scroll-snap-align: center;
 }
 .section04 .container .item1 {
