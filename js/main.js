@@ -18,9 +18,9 @@ const images = document.querySelectorAll('.slide-in')
 
 function moveImg(){
   images.forEach(img => {
-    // (window 스크롤 값 + window안쪽 높이) - 이미지 높이 / 2
+    //(페이지의 처음부터 viewport까지의 거리 +)
     const slideIn = (window.scrollY + window.innerHeight) - img.height / 2
-    // 이미지 위치값 + 이미지 높이
+    // offsetparent를 기준으로 img 윗부분까지의 거리 + 이미지 높이
     const imageBottom = img.offsetTop + img.height
     // 사진이 제 자리를 찾아오는게 이미지위치 값보다 클 때
     const isHalfShown = slideIn > img.offsetTop
@@ -39,6 +39,8 @@ function moveImg(){
 
 window.addEventListener('scroll', debounce(moveImg))
 
+
+//버튼 클릭시 스크롤 탑으로
 const scollTop = document.querySelector('.scroll-top')
 
 window.addEventListener('scroll', function(){
