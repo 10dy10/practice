@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=yes" name="viewport" />
+
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/fullpage.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- pageable -->
+  <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+  <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+
   <title>Document</title>
 </head>
 <body>
@@ -28,25 +38,36 @@
       </div>
     </div>
   </div>
-  <div class="wrap">
-    <section class="section">
-      <div class="inner">
-        <h1>SECTION01</h1>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto debitis sunt optio natus temporibus ad non eligendi dolor fuga ex soluta harum molestiae inventore, libero asperiores recusandae enim similique repellat.</div>
+  <div class="pg-wrapper">
+    <div class="pg-container" id="container">
+      <div class="pg-page pg-active" id="page-1" data-anchor="page-1">
+        <div class="inner">
+          <h1>SECTION01</h1>
+          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto debitis sunt optio natus temporibus ad non eligendi dolor fuga ex soluta harum molestiae inventore, libero asperiores recusandae enim similique repellat.</div>
+        </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="inner">
-        <h1>SECTION02</h1>
-        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere quis debitis facilis sit, esse nesciunt fuga dolorem velit mollitia sed ad doloribus eligendi consequuntur officiis rem alias praesentium odio.</div>
+      <div class="pg-page" id="page-2" data-anchor="page-2">
+        <div class="inner">
+          <h1>SECTION02</h1>
+          <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere quis debitis facilis sit, esse nesciunt fuga dolorem velit mollitia sed ad doloribus eligendi consequuntur officiis rem alias praesentium odio.</div>
+        </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="inner">
-        <h1>SECTION03</h1>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur fuga, dolore beatae assumenda placeat sed dolor nulla ducimus iste illum nobis fugiat molestiae unde ipsum perferendis quae earum provident?</div>
+      <div class="pg-page" id="page-3" data-anchor="page-3">
+        <div class="inner">
+          <h1>SECTION03</h1>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur fuga, dolore beatae assumenda placeat sed dolor nulla ducimus iste illum nobis fugiat molestiae unde ipsum perferendis quae earum provident?</div>
+        </div>
       </div>
-    </section>
+    </div>
   </div>
+
+  <script>
+    
+    new Pageable("#container", {
+      animation: 600, // the duration in ms of the scroll animation
+    });
+
+
+  </script>
 </body>
 </html>
